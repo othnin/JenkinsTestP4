@@ -16,6 +16,7 @@ pipeline {
                     # Create virtualenv and install necessary packages
                     virtualenv --no-site-packages $PYENV_HOME
                     . $PYENV_HOME/bin/activate
+                    pip install -r requirements.txt
                     pip install --quiet nosexcover
                     pip install --quiet pylint
                     pip install --quiet $WORKSPACE/  # where your setup.py lives
