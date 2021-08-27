@@ -20,7 +20,7 @@ pipeline {
                     pip install --quiet nosexcover
                     pip install --quiet pylint
                     pip install --quiet $WORKSPACE/  # where your setup.py lives
-                    nosetests --with-xcoverage --with-xunit --cover-package=JenkinsTestP4 --cover-erase
+                    nosetests --with-xcoverage --with-xunit --cover-erase
                     pylint -f parseable myapp/ | tee pylint.out
                     #. venv/bin/activate
                     #pip install -r requirements.txt
