@@ -21,7 +21,7 @@ pipeline {
                     pip install --quiet pylint
                     pip install --quiet $WORKSPACE/  # where your setup.py lives
                     nosetests --with-xcoverage --with-xunit --cover-erase
-                    pylint -f parseable myapp/ | tee pylint.out
+                    pylint -f parseable JenkinsTestP4/ | tee pylint.out
                     #. venv/bin/activate
                     #pip install -r requirements.txt
                     #python test.py
